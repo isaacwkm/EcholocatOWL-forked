@@ -12,6 +12,10 @@ class inbetween extends Phaser.Scene {
         // Play winner sound
         this.sound.play("winner", { volume: 0.5 });
 
+        if (my.levelMan.currLevel == (my.levelMan.lastLevel)){
+            this.scene.start("winScreen")
+        }
+
         // Add title text
         this.add.text(this.cameras.main.centerX, this.cameras.main.centerY - 100, "Level " + (my.levelMan.currLevel) + " Complete!", {
             fontSize: '64px',
@@ -32,6 +36,7 @@ class inbetween extends Phaser.Scene {
             my.levelMan.currLevel += 1; // increment global currenet level
             let sceneName = "level" + my.levelMan.currLevel; // set string to the next scene name
             this.scene.start(sceneName); // go to next scene
+            
         });
     }
 }

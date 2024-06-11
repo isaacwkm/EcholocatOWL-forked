@@ -25,7 +25,7 @@ let config = {
     },
     width: 3500,
     height: 600,
-    scene: [ TitleScreen, Load, PlatformerLevel, inbetween, Level2, inbetween2, Level3, WinScreen ]
+    scene: [ TitleScreen, Load, PlatformerLevel, inbetween, Level2, Level3, WinScreen ]
 }
 
 var cursors;
@@ -34,6 +34,6 @@ var my = {
     sprite: {}, 
     text: {}, 
     vfx: {},
-    levelMan: {currLevel: 1}};
+    levelMan: {currLevel: 1, lastLevel: 3}};
 
 const game = new Phaser.Game(config);

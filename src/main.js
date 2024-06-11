@@ -25,11 +25,15 @@ let config = {
     },
     width: 3500,
     height: 600,
-    scene: [ TitleScreen, Load, Platformer, inbetween, LevelTwo, inbetween2, LevelThree, WinScreen ]
+    scene: [ TitleScreen, Load, PlatformerLevel, inbetween, Level2, inbetween2, Level3, WinScreen ]
 }
 
 var cursors;
 const SCALE = 2.0;
-var my = {sprite: {}, text: {}, vfx: {}};
+var my = {
+    sprite: {}, 
+    text: {}, 
+    vfx: {},
+    levelMan: {currLevel: 1}};
 
 const game = new Phaser.Game(config);

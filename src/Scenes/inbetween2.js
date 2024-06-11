@@ -26,7 +26,7 @@ class inbetween2 extends Phaser.Scene {
 
         // Add a handler for the space key
         this.spaceKey.on('down', () => {
-            this.scene.start('levelthree');
+            this.scene.start('level3');
         });
     }
 }

@@ -48,7 +48,7 @@ class Load extends Phaser.Scene {
         // No need to create animations for the owl if it's a static image
 
          // ...and pass to the next Scene
-         this.scene.start("platformerScene");
+         this.scene.start("level1");
     }
 
     // Never get here since a new scene is started in create()

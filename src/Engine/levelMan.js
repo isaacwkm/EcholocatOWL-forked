@@ -60,7 +60,7 @@ class levelMan {
         // Handle collision detection with coins
         scene.physics.add.overlap(my.sprite.player, scene.coinGroup, (obj1, obj2) => {
             obj2.destroy(); // remove coin on overlap
-            this.updateScore(1); // Update score by 1
+            levelMan.updateScore(scene, 1); // Update score by 1
         });
     
         // Enable collision handling
@@ -145,7 +145,7 @@ class levelMan {
         }
     }
 
-    updateScore(points) {
+    static updateScore(scene, points) {
         scene.score += points;
         document.getElementById('score').innerText = 'Score: ' + scene.score;
         scene.sound.play("coins", { volume: 0.5 });

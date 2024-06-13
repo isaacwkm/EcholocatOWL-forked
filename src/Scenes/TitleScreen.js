@@ -5,7 +5,6 @@ class TitleScreen extends Phaser.Scene {
     }
 
     preload() {
-        this.load.image('owl', './assets/owl.png');
     }
 
     create() {
@@ -42,7 +41,7 @@ class TitleScreen extends Phaser.Scene {
 
         // Add a handler for the space key
         this.spaceKey.on('down', () => {
-            this.scene.start('loadScene');
+            this.scene.start('level1');
         });
     }
 }

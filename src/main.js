@@ -25,15 +25,17 @@ let config = {
     },
     width: 3500,
     height: 600,
-    scene: [ TitleScreen, Load, PlatformerLevel, inbetween, Level2, Level3, WinScreen ]
+    scene: [ Load, TitleScreen, PlatformerLevel, inbetween, Level2, Level3, WinScreen]
 }
 
 var cursors;
 const SCALE = 2.0;
 var my = {
-    sprite: {}, 
+    sprite: {player: null, enemies: []}, 
     text: {}, 
     vfx: {},
-    levelMan: {currLevel: 1, lastLevel: 3}};
+    levelMan: {currLevel: 1, lastLevel: 3}, // Global variables related to levelMan class
+    enemyMan: null // Pointer to enemy manager. EnemyMan is a single pointer without any needing any globals, because only one set of enemies (in a level) can exist at once.
+};
 
 const game = new Phaser.Game(config);

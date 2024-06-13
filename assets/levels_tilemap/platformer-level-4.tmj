@@ -1093,6 +1093,42 @@
                  "width":16,
                  "x":3057.75,
                  "y":254.625
+                }, 
+                {
+                 "gid":1006,
+                 "height":16,
+                 "id":155,
+                 "name":"enemyWolfSpawn",
+                 "properties":[
+                        {
+                         "name":"collides",
+                         "type":"bool",
+                         "value":false
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":378,
+                 "y":258.667
+                }, 
+                {
+                 "gid":1006,
+                 "height":16,
+                 "id":156,
+                 "name":"enemyWolfSpawn",
+                 "properties":[
+                        {
+                         "name":"collides",
+                         "type":"bool",
+                         "value":false
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":645.333,
+                 "y":194
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1101,7 +1137,7 @@
          "y":0
         }],
  "nextlayerid":3,
- "nextobjectid":142,
+ "nextobjectid":157,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.10.2",
@@ -1110,7 +1146,7 @@
         {
          "columns":44,
          "firstgid":1,
-         "image":"..\/..\/..\/Desktop\/EcholocatOWL-forked-main\/assets\/spritesheet_default.png",
+         "image":"spritesheet_default.png",
          "imageheight":704,
          "imagewidth":704,
          "margin":0,

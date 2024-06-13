@@ -6,7 +6,7 @@ class Enemy extends Phaser.Physics.Arcade.Sprite {
         super(scene, x, y, texture, frame);
 
         // settings
-        this.setScale(0.55);
+        this.setScale(0.2);
         scene.add.existing(this); // add to scene to make it visible
         scene.physics.add.existing(this);
         this.body.setAllowGravity(false);
@@ -26,9 +26,7 @@ class Enemy extends Phaser.Physics.Arcade.Sprite {
 
     setProperties(){
         let defaultConfig = { // default config object
-            id: 0, // unique identifier for its place in the my.sprite.enemies array
             lifetime: 0, // tick counter to use in cycling behavior phases
-            state: 1, // 0 = dead, 1 = alive // unused for now
             phaseLifetime: 0, // how long the enemy has been in its current behavior mode.
             phase: 0, // 0 = default, other values are specified for in enemy's class file
         }

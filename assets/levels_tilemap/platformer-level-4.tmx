@@ -9599,7 +9599,15 @@
   <object id="139" name="coin" gid="86" x="3024.75" y="255.375" width="16" height="16"/>
   <object id="140" name="coin" gid="86" x="3040.75" y="271.125" width="16" height="16" rotation="-90"/>
   <object id="141" name="coin" gid="86" x="3057.75" y="254.625" width="16" height="16" rotation="-180"/>
-  <object id="155" name="enemyWolfSpawn" gid="1006" x="378" y="258.667" width="16" height="16"/>
-  <object id="156" name="enemyWolfSpawn" gid="1006" x="645.333" y="194" width="16" height="16"/>
+  <object id="155" name="enemyWolfSpawn" gid="1006" x="378" y="258.667" width="16" height="16">
+   <properties>
+    <property name="collides" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="156" name="enemyWolfSpawn" gid="1006" x="645.333" y="194" width="16" height="16">
+   <properties>
+    <property name="collides" type="bool" value="false"/>
+   </properties>
+  </object>
  </objectgroup>
 </map>

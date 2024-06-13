@@ -4,7 +4,6 @@ class EnemyWolf extends Enemy {
     // spriteKey - key for the sprite image asset
     constructor(scene, x = 0, y = 0, texture = "enemyWolf", frame = null) {
         let properties = {
-            id: identifier, // unique identifier
             lifetime: 0, // tick counter to use in cycling behavior phases
         }
 

@@ -2,7 +2,7 @@ class Enemy extends Phaser.Physics.Arcade.Sprite {
 
     // x,y - starting sprite location
     // spriteKey - key for the sprite image asset
-    constructor(scene, x, y, texture, frame, propertyObj = null) {
+    constructor(scene, x, y, texture, frame = null, propertyObj = null) {
         super(scene, x, y, texture, frame);
 
         // settings
@@ -18,6 +18,8 @@ class Enemy extends Phaser.Physics.Arcade.Sprite {
 
         // Make active
         this.makeActive();
+
+        console.log("wolf created");
 
         return this;
     }

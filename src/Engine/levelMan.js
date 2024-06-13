@@ -64,6 +64,7 @@ class LevelMan {
         });
 
         // Add enemy wolves
+        my.enemyMan = null;
         my.enemyMan = new EnemyMan(scene);
         my.enemyMan.placeEnemies();
     

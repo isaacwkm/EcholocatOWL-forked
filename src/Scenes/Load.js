@@ -15,17 +15,11 @@ class Load extends Phaser.Scene {
         this.load.tilemapTiledJSON("platformer-level-3", "platformer-level-3.tmj");
         this.load.tilemapTiledJSON("platformer-level-4", "platformer-level-4.tmj");
         this.load.tilemapTiledJSON("platformer-level-5", "platformer-level-5.tmj");
-
-        // Load IMAGES
-        //
-        // #IMAGES
-        // Load tilemap information & character spritesheet
-        this.load.setPath("assets/images/sprites");
-        this.load.image("tilemap_tiles", "tilemap_packed.png");                         // Packed tilemap
+        this.load.image("tilemap_tiles", "tilemap_packed.png");     // Packed tilemap
         this.load.image("tilemap_tiles2", "spritesheet_default.png");
         this.load.atlas("platformer_characters", "tilemap-characters-packed.png", "tilemap-characters-packed.json");
 
-        // #IMAGES
+        // #TILEMAPS
         // Spritesheet stuff
         // Load the tilemap as a spritesheet
         this.load.spritesheet("tilemap_sheet", "tilemap_packed.png", {
@@ -37,6 +31,8 @@ class Load extends Phaser.Scene {
             frameHeight: 18
         });
 
+        // Load IMAGES
+        //
         // #IMAGES
         // Load the Owl image(s) for PLAYER
         this.load.setPath("assets/images/sprites/Player");

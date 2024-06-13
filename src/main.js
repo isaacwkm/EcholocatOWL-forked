@@ -31,7 +31,7 @@ let config = {
 var cursors;
 const SCALE = 2.0;
 var my = {
-    sprite: {player: null, enemies: []}, 
+    sprite: {}, 
     text: {}, 
     vfx: {},
     levelMan: {currLevel: 1, lastLevel: 3}, // Global variables related to levelMan class

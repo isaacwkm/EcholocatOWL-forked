@@ -1,5 +1,5 @@
 // enemy-related functions
-class enemyMan {
+class EnemyMan {
     constructor(scene) {
         this.scene = scene; // scene that the enemy manager is working on
         this.enemyCount = 0; // total number of enemies in current scene
@@ -7,34 +7,38 @@ class enemyMan {
 
     placeEnemies(scene = this.scene) {
         // Find wolf enemies in the "Objects" layer in Phaser
-        scene.wolves = scene.map.createFromObjects("Objects", {
-            name: "enemyWolf",
-            key: "enemyWolf"
+        scene.enemyWolfSpawn = scene.map.createFromObjects("Objects", {
+            name: "enemyWolfSpawn",
+            key: "tilemap_sheet",
+            frame: 151
         });
 
-        // Convert wolves to Arcade Physics sprites
-        scene.physics.world.enable(scene.wolves, Phaser.Physics.Arcade.STATIC_BODY);
+        scene.enemyWolves = [];
 
-        // Create a Phaser group out of the array scene.wolves
-        scene.wolfGroup = scene.add.group(scene.wolves);
+        //Initialize enemy wolves at enemy spawns  
+        for (let i = 0; i < scene.enemyWolfSpawn.length; i++){
+            let enemy = new EnemyWolf(scene, scene.enemyPatrolSpawn[i].x, scene.enemyPatrolSpawn[i].y, "enemyWolf");
+            scene.enemyWolves.push(enemy);
+        }
 
-        // Initially set the wolves visibility to false
-        scene.wolfGroup.children.iterate(wolf => wolf.setVisible(scene.isWorldVisible));
+        //Collider properties for player with enemyWolf        
+        scene.physics.add.collider(my.sprite.player, scene.enemyWolves, (obj1, obj2) => {
+            this.deathByEnemy();  
+        })
 
-        // Handle collision detection with wolves
-        scene.physics.add.overlap(my.sprite.player, scene.wolfGroup, (obj1, obj2) => {
+    }
 
-            // #TODO Play lose sound
-            this.scene.sound.play("SOUNDKEY", {
-                volume: 1   // Can adjust volume using this, goes from 0 to 1
-            });
-
-            // #TODO-LOW-PRIO death animation
-            my.sprite.player.y = -100; // Current "animation": clear out player from screen immediately
-            my.levelMan.currLevel -= 1;
-            scene.scene.start("inbetween"); // Restart level #TODO make a lose screen - currently using win screen  of prev level to "restart" the level
-            
+    deathByEnemy(){
+        // #TODO Play lose sound
+        this.scene.sound.play("coins", {
+            volume: 1   // Can adjust volume using this, goes from 0 to 1
         });
+
+        // #TODO-LOW-PRIO death animation
+        my.sprite.player.y = -100; // Current "animation": clear out player from screen immediately
+        my.levelMan.currLevel -= 1;
+        scene.scene.start("inbetween"); // Restart level #TODO make a lose screen - currently using win screen  of prev level to "restart" the level
+        
     }
 
 }

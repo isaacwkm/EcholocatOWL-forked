@@ -4,16 +4,16 @@ class PlatformerLevel extends Phaser.Scene {
     }
 
     init() {
-        levelMan.initializeLevel(this);
+        LevelMan.initializeLevel(this);
     }
 
     create() {
         let levelTilemapName = "platformer-level-3";
-        levelMan.createLevel(this, levelTilemapName);
+        LevelMan.createLevel(this, levelTilemapName);
     }
     
 
     update() {
-        levelMan.updateLevel(this);
+        LevelMan.updateLevel(this);
     }
 }

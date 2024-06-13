@@ -1,5 +1,5 @@
 // level Manager
-class levelMan {
+class LevelMan {
     constructor() {
     }
 
@@ -60,8 +60,12 @@ class levelMan {
         // Handle collision detection with coins
         scene.physics.add.overlap(my.sprite.player, scene.coinGroup, (obj1, obj2) => {
             obj2.destroy(); // remove coin on overlap
-            levelMan.updateScore(scene, 1); // Update score by 1
+            LevelMan.updateScore(scene, 1); // Update score by 1
         });
+
+        // Add enemy wolves
+        my.enemyMan = new EnemyMan(scene);
+        my.enemyMan.placeEnemies();
     
         // Enable collision handling
         scene.physics.add.collider(my.sprite.player, scene.groundLayer);
@@ -133,7 +137,7 @@ class levelMan {
 
         // Reveal the world for 0.5 seconds and then set a cooldown of 3 seconds
         if (Phaser.Input.Keyboard.JustDown(scene.spaceKey) && scene.canRevealWorld) {
-            playerAbilities.revealWorld(scene);
+            PlayerAbilities.revealWorld(scene);
         }
 
         if (Phaser.Input.Keyboard.JustDown(scene.rKey)) {

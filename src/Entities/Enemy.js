@@ -1,4 +1,4 @@
-class Enemy extends Phaser.GameObjects.Sprite {
+class Enemy extends Phaser.Physics.Arcade.Sprite {
 
     // x,y - starting sprite location
     // spriteKey - key for the sprite image asset
@@ -7,8 +7,10 @@ class Enemy extends Phaser.GameObjects.Sprite {
 
         // settings
         this.setScale(0.55);
-
         scene.add.existing(this); // add to scene to make it visible
+        scene.physics.add.existing(this);
+        this.body.setAllowGravity(false);
+
         this.scene = scene; // link to scene the enemy is in
 
         // Game-specific Properties
@@ -79,7 +81,6 @@ class Enemy extends Phaser.GameObjects.Sprite {
         this.visible = false;
         this.x = -300;
         this.y = -300;
-        my.sprite.enemies[id] = null;
     }
 
 }

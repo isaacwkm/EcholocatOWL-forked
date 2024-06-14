@@ -42,7 +42,6 @@ class LevelMan {
             key: "tilemap_sheet",
             frame: 151
         });
-    
         // Convert coins to Arcade Physics sprites
         scene.physics.world.enable(scene.coins, Phaser.Physics.Arcade.STATIC_BODY);
     
@@ -67,6 +66,7 @@ class LevelMan {
         my.enemyMan = null;
         my.enemyMan = new EnemyMan(scene);
         my.enemyMan.placeEnemies();
+        
     
         // Enable collision handling
         scene.physics.add.collider(my.sprite.player, scene.groundLayer);

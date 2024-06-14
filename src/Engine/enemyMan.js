@@ -11,7 +11,7 @@ class EnemyMan {
         scene.enemyWolfSpawn = scene.map.createFromObjects("Objects", {
             name: "enemyWolfSpawn",
             key: "tilemap_sheet",
-            frame: 151
+            frame: 152
         });
         console.log("enemyWolfSpawn.length: " + scene.enemyWolfSpawn.length);
 
@@ -21,6 +21,7 @@ class EnemyMan {
         for (let i = 0; i < scene.enemyWolfSpawn.length; i++){
             console.log("starting to make a wolf");
             let enemy = new EnemyWolf(scene, scene.enemyWolfSpawn[i].x, scene.enemyWolfSpawn[i].y, "enemyWolf");
+            enemy.setVisible(false); // Hide the enemy initially
             scene.enemyWolves.push(enemy);
         }
 

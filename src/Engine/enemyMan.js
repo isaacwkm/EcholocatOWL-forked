@@ -40,7 +40,7 @@ class EnemyMan {
 
         // #TODO-LOW-PRIO death animation
         my.sprite.player.y = -100; // Current "animation": clear out player from screen immediately
-        my.levelMan.currLevel -= 1;
+        my.LevelMan.currLevel -= 1;
         this.scene.scene.start("lossScreen"); // Restart level #TODO make a lose screen - currently using win screen  of prev level to "restart" the level
         
     }

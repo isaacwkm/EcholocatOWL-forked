@@ -11,7 +11,7 @@ class LossScreen extends Phaser.Scene {
         // Play sound
         //this.sound.play("winner", { volume: 0.5 });
 
-        if (my.levelMan.currLevel == (my.levelMan.lastLevel)){
+        if (my.LevelMan.currLevel == (my.LevelMan.lastLevel)){
             this.scene.start("winScreen")
         }
 
@@ -22,7 +22,7 @@ class LossScreen extends Phaser.Scene {
         }).setOrigin(0.5);
 
         // Add instruction text
-        this.add.text(this.cameras.main.centerX, this.cameras.main.centerY, 'Press SPACE to Restart Level ' + (my.levelMan.currLevel + 1), {
+        this.add.text(this.cameras.main.centerX, this.cameras.main.centerY, 'Press SPACE to Restart Level ' + (my.LevelMan.currLevel + 1), {
             fontSize: '32px',
             fill: '#ffffff'
         }).setOrigin(0.5);
@@ -32,8 +32,8 @@ class LossScreen extends Phaser.Scene {
 
         // Add a handler for the space key
         this.spaceKey.on('down', () => {
-            my.levelMan.currLevel += 1; // increment global currenet level
-            let sceneName = "level" + my.levelMan.currLevel; // set string to the next scene name
+            my.LevelMan.currLevel += 1; // increment global currenet level
+            let sceneName = "level" + my.LevelMan.currLevel; // set string to the next scene name
             this.scene.start(sceneName); // go to next scene
             
         });

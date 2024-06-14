@@ -12,18 +12,18 @@ class inbetween extends Phaser.Scene {
         // Play winner sound
         this.sound.play("winner", { volume: 0.5 });
 
-        if (my.levelMan.currLevel == (my.levelMan.lastLevel)){
+        if (my.LevelMan.currLevel == (my.LevelMan.lastLevel)){
             this.scene.start("winScreen")
         }
 
         // Add title text
-        this.add.text(this.cameras.main.centerX, this.cameras.main.centerY - 100, "Level " + (my.levelMan.currLevel) + " Complete!", {
+        this.add.text(this.cameras.main.centerX, this.cameras.main.centerY - 100, "Level " + (my.LevelMan.currLevel) + " Complete!", {
             fontSize: '64px',
             fill: '#ffffff'
         }).setOrigin(0.5);
 
         // Add instruction text
-        this.add.text(this.cameras.main.centerX, this.cameras.main.centerY, 'Press SPACE to Start Level ' + (my.levelMan.currLevel + 1), {
+        this.add.text(this.cameras.main.centerX, this.cameras.main.centerY, 'Press SPACE to Start Level ' + (my.LevelMan.currLevel + 1), {
             fontSize: '32px',
             fill: '#ffffff'
         }).setOrigin(0.5);
@@ -33,8 +33,8 @@ class inbetween extends Phaser.Scene {
 
         // Add a handler for the space key
         this.spaceKey.on('down', () => {
-            my.levelMan.currLevel += 1; // increment global currenet level
-            let sceneName = "level" + my.levelMan.currLevel; // set string to the next scene name
+            my.LevelMan.currLevel += 1; // increment global currenet level
+            let sceneName = "level" + my.LevelMan.currLevel; // set string to the next scene name
             this.scene.start(sceneName); // go to next scene
             
         });

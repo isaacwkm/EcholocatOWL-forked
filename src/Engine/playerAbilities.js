@@ -24,5 +24,10 @@ class PlayerAbilities {
             scene.canRevealWorld = true;
         }, [], scene);
     }
+    create() {
+        // create game objects
+        // Example of using PlayerAbilities:
+        PlayerAbilities.revealWorld(this);
+    }
 }
 

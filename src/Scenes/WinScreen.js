@@ -26,7 +26,7 @@ class WinScreen extends Phaser.Scene {
 
         // Add a handler for the space key
         this.spaceKey.on('down', () => {
-            my.levelMan.currLevel = 1;
+            my.LevelMan.currLevel = 1;
             this.scene.start('titleScreen');
         });
     }

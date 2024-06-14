@@ -5,21 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Platformer Improvement Kit</title>
     <script src="./lib/phaser.js"></script>
+    <script src="./src/Engine/levelMan.js"></script>
+    <script src="./src/Engine/enemyMan.js"></script>
+    <script src="./src/Engine/playerAbilities.js"></script>
+    <script src="./src/Entities/Enemy.js"></script>
+    <script src="./src/Entities/EnemyWolf.js"></script>
     <script src="./src/Scenes/TitleScreen.js"></script>
     <script src="./src/Scenes/Load.js"></script>
-    <script src="./src/Scenes/Platformer.js"></script>
+    <script src="./src/Scenes/PlatformerLevel.js"></script>
     <script src="./src/Scenes/LevelTwo.js"></script>
     <script src="./src/Scenes/inbetween.js"></script>
+    <script src="./src/Scenes/LossScreen.js"></script>
     <script src="./src/Scenes/LevelThree.js"></script>
-    <script src="./src/Scenes/inbetween2.js"></script>
     <script src="./src/Scenes/WinScreen.js"></script>
     <script src="./src/main.js"></script>
 </head>
 <body>
     <div id="phaser-game"></div>
     <span id="description"></span>
-    <h1>How to Play: Arrow Keys to move Spacebar to use "Echo Location" R to restart Level</h1>
-    <h1>You may need to zoom out the browser screen to ensure best experience</h1>
+    <h1>How to Play: / Arrow Keys to move / Spacebar to use "Echo-Location" / R to restart Level</h1>
+    <h1>Zoom out the browser screen to ensure best experience</h1>
     <h1>Reach 40 Points to move on to the next level!</h1>
     <h1 id="score">Score: 0</h1>
 </body>

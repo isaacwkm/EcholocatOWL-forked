@@ -1,6 +1,6 @@
-class Level3 extends Phaser.Scene {
+class PlatformerLevel extends Phaser.Scene {
     constructor() {
-        super("level3");
+        super("level1");
     }
 
     init() {
@@ -8,7 +8,7 @@ class Level3 extends Phaser.Scene {
     }
 
     create() {
-        let levelTilemapName = "platformer-level-5";
+        let levelTilemapName = "platformer-level-3";
         LevelMan.createLevel(this, levelTilemapName);
     }
     

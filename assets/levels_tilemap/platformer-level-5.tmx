@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="200" height="20" tilewidth="16" tileheight="16" infinite="0" nextlayerid="3" nextobjectid="170">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="200" height="20" tilewidth="16" tileheight="16" infinite="0" nextlayerid="3" nextobjectid="179">
  <editorsettings>
   <export target="platformer-level-5.tmj" format="json"/>
  </editorsettings>
@@ -9595,10 +9595,10 @@
   <object id="139" name="coin" gid="86" x="3024.75" y="255.375" width="16" height="16"/>
   <object id="140" name="coin" gid="86" x="3040.75" y="271.125" width="16" height="16" rotation="-90"/>
   <object id="141" name="coin" gid="86" x="3057.75" y="254.625" width="16" height="16" rotation="-180"/>
-  <object id="142" name="coin" gid="87" x="401.875" y="241.042" width="16" height="16"/>
-  <object id="143" name="coin" gid="87" x="401.625" y="241.625" width="16" height="16" rotation="-90"/>
-  <object id="144" name="coin" gid="87" x="401.875" y="240.875" width="16" height="16" rotation="-180"/>
-  <object id="145" name="coin" gid="87" x="402.375" y="240.375" width="16" height="16" rotation="90"/>
+  <object id="142" name="coin" gid="87" x="401.875" y="171.042" width="16" height="16"/>
+  <object id="143" name="coin" gid="87" x="401.625" y="171.625" width="16" height="16" rotation="-90"/>
+  <object id="144" name="coin" gid="87" x="401.875" y="170.875" width="16" height="16" rotation="-180"/>
+  <object id="145" name="coin" gid="87" x="402.375" y="170.375" width="16" height="16" rotation="90"/>
   <object id="150" name="coin" gid="87" x="613.217" y="143.402" width="16" height="16" rotation="90"/>
   <object id="151" name="coin" gid="87" x="612.967" y="143.152" width="16" height="16"/>
   <object id="152" name="coin" gid="87" x="612.967" y="144.152" width="16" height="16" rotation="-90"/>
@@ -9619,5 +9619,12 @@
   <object id="167" name="coin" gid="87" x="2661.02" y="92.1467" width="16" height="16" rotation="90"/>
   <object id="168" name="coin" gid="87" x="2660.02" y="92.6467" width="16" height="16"/>
   <object id="169" name="coin" gid="87" x="2660.27" y="92.8967" width="16" height="16" rotation="-90"/>
+  <object id="172" name="enemyWolfSpawn" gid="346" x="560" y="240" width="16" height="16"/>
+  <object id="173" name="enemyWolfSpawn" gid="346" x="656" y="240" width="16" height="16"/>
+  <object id="174" name="enemyWolfSpawn" gid="346" x="304" y="304" width="16" height="16"/>
+  <object id="175" name="enemyWolfSpawn" gid="346" x="1232" y="304" width="16" height="16"/>
+  <object id="176" name="enemyWolfSpawn" gid="346" x="2128" y="304" width="16" height="16"/>
+  <object id="177" name="enemyWolfSpawn" gid="346" x="2192" y="304" width="16" height="16"/>
+  <object id="178" name="enemyWolfSpawn" gid="346" x="2048" y="304" width="16" height="16"/>
  </objectgroup>
 </map>

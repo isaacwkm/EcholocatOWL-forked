@@ -6,7 +6,7 @@ class Enemy extends Phaser.Physics.Arcade.Sprite {
         super(scene, x, y, texture, frame);
 
         // settings
-        this.setScale(0.2);
+        this.setScale(0.15);
         scene.add.existing(this); // add to scene to make it visible
         scene.physics.add.existing(this);
         this.body.setAllowGravity(false);
@@ -43,33 +43,7 @@ class Enemy extends Phaser.Physics.Arcade.Sprite {
         if (this.active == false) {
             return;
         }
-        this.checkCollision(); // check collision with player
         this.properties.lifetime++; // increment lifetime
-    }
-
-    // Check for collision with the enemy
-    checkCollision() {
-        if (this.collides(this, my.sprite.player)) {
-            // #TODO-LOW-PRIO death animation
-            my.sprite.player.y = -100; // Current "animation": clear out player from screen immediately
-            my.levelMan.currLevel -= 1;
-            scene.scene.start("inbetween"); // Restart level #TODO make a lose screen - currently using win screen  of prev level to "restart" the level
-
-            // #TODO Play lose sound
-            this.scene.sound.play("SOUNDKEY", {
-                volume: 1   // Can adjust volume using this, goes from 0 to 1
-            });
-
-            // #TODO Lose/Restart Level
-
-        }
-
-    }
-
-    collides(a, b) {
-        if (Math.abs(a.y - b.y) > (a.displayHeight / 2 + b.displayHeight / 2)) return false;
-        if (Math.abs(a.x - b.x) > (a.displayWidth / 2 + b.displayWidth / 2)) return false;
-        return true;
     }
 
     makeActive() {

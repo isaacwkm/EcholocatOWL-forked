@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="200" height="20" tilewidth="16" tileheight="16" infinite="0" nextlayerid="3" nextobjectid="157">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="200" height="20" tilewidth="16" tileheight="16" infinite="0" nextlayerid="3" nextobjectid="161">
  <editorsettings>
   <export target="platformer-level-3.tmj" format="json"/>
  </editorsettings>
@@ -9599,12 +9599,32 @@
   <object id="139" name="coin" gid="86" x="3024.75" y="255.375" width="16" height="16"/>
   <object id="140" name="coin" gid="86" x="3040.75" y="271.125" width="16" height="16" rotation="-90"/>
   <object id="141" name="coin" gid="86" x="3057.75" y="254.625" width="16" height="16" rotation="-180"/>
-  <object id="155" name="enemyWolfSpawn" gid="1006" x="378" y="258.667" width="16" height="16">
+  <object id="155" name="enemyWolfSpawn" gid="1006" x="376.667" y="269.334" width="16" height="16">
    <properties>
     <property name="collides" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="156" name="enemyWolfSpawn" gid="1006" x="645.333" y="194" width="16" height="16">
+  <object id="156" name="enemyWolfSpawn" gid="1006" x="655.333" y="202" width="16" height="16">
+   <properties>
+    <property name="collides" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="157" name="enemyWolfSpawn" gid="1006" x="1094" y="236" width="16" height="16">
+   <properties>
+    <property name="collides" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="158" name="enemyWolfSpawn" gid="1006" x="1654" y="172" width="16" height="16">
+   <properties>
+    <property name="collides" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="159" name="enemyWolfSpawn" gid="1006" x="2635.33" y="298" width="16" height="16">
+   <properties>
+    <property name="collides" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="160" name="enemyWolfSpawn" gid="1006" x="2904" y="203.333" width="16" height="16">
    <properties>
     <property name="collides" type="bool" value="false"/>
    </properties>
